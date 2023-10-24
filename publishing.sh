@@ -1,19 +1,20 @@
 # MuseScore
-#wget https://cdn.jsdelivr.net/musescore/v4.1.1/MuseScore-4.1.1.232071203-x86_64.AppImage #if I want the most up-to-date
-sudo apt install musescore
+wget https://cdn.jsdelivr.net/musescore/v4.1.1/MuseScore-4.1.1.232071203-x86_64.AppImage #if I want the most up-to-date
 
 # LilyPond
-sudo apt install lilypond
+sudo nala install lilypond
 
 # Frescobaldi (GUI Frontend for LilyPond)
 sudo apt install frescobaldi
 
 # LaTeX
-sudo apt install texlive-base
-sudo apt install texlive-music
+sudo nala install texlive-base texlive-music
 
 # Scribus
-sudo apt install scribus
+sudo nala install scribus
 
 # Fonts
-sudo apt install font-havana
+sudo nala install font-havana
+
+# Lyx
+sudo nala install lyx
