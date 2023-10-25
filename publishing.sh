@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # MuseScore
 wget https://cdn.jsdelivr.net/musescore/v4.1.1/MuseScore-4.1.1.232071203-x86_64.AppImage # TODO modify to be version-agnostic
 

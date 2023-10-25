@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # DAWs
 ## Renoise
 #wget https://files.renoise.com/demo/Renoise_3_4_3_Demo_Linux_x86_64.tar.gz

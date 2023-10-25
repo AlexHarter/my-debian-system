@@ -2,11 +2,14 @@
 
 # Start here.  Enter these commands:
 # sudo apt install git
-# mkdir Code
-# cd Code
+# mkdir ~/Code
+# cd ~/Code
 # git clone https://github.com/AlexHarter/My-Debian-System
-# cd My-Debian-System
+# cd ~/Code/My-Debian-System
+# chmod +x ~/Code/My-Debian-System/alex-install.sh
 # ./alex-install.sh
+
+mkdir ~/Downloads
 
 # apt frontend: nala
 sudo apt install -y nala
@@ -17,21 +20,25 @@ sudo nala install -y xorg
 #Window Manager: i3
 sudo nala install -y i3
 
+# TODO enable natural scrolling
+
+# TODO replace dmenu with Rofi
+
 # Display Manager: ly
-sudo nala install build-essential libpam0g-dev libxcb-xkb-dev # Dependencies
+sudo nala install -y build-essential libpam0g-dev libxcb-xkb-dev # Dependencies
 
 cd /
 sudo git clone --recurse-submodules https://github.com/fairyglade/ly
 cd ly
 sudo make
-sudo make install installsystemd
+sudo make install -y installsystemd
 sudo systemctl enable ly.service
 
 # Terminal: kitty
 sudo nala install kitty
 
 # File Manager: Thunar
-sudo nala  install -y thunar # TODO look at alternatives
+sudo nala  install -y thunar # TODO look for an alternative
 
 # Audio
 sudo nala install -y pipewire-audio
@@ -41,25 +48,25 @@ sudo nala install -y pipewire-audio
 #sudo systemctl enable bluetooth
 
 # Fonts
-sudo apt install fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
+sudo nala install -y fonts-font-awesome fonts-ubuntu fonts-liberation2 fonts-liberation fonts-terminus 
 
 # Install Nerd Fonts
 source ~/Code/My-Debian-System/nerdfonts.sh
 
 # Torrent Client: qbittorrent
-sudo apt install qbittorrent
+sudo nala install -y qbittorrent
 
 # Web Browser: Brave
 sudo nala install -y curl
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo nala update
-sudo nala install brave-browser
+sudo nala install -y brave-browser
 
-#sudo nala install appimagelauncher #not found
+#sudo nala install appimagelauncher # TODO fix this
 
 # Obsidian
-wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage # Modify to be version-agnostic
+wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage # TODO change to .deb # TODO download to Downloads folder # TODO Modify to be version-agnostic
 appimagelauncher Obsidian-1.4.16.AppImage
 
 # Chrysalis for Keyboardio Keyboards
