@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO create folders for auxillary scripts
+
 # Start here.  Enter these commands:
 # sudo apt install git
 # mkdir ~/Code
@@ -19,6 +21,7 @@ sudo nala install -y xorg
 
 #Window Manager: i3
 sudo nala install -y i3
+# TODO copy config to ~/.config/i3/
 
 # TODO enable natural scrolling
 
@@ -69,6 +72,10 @@ sudo nala install -y brave-browser
 wget https://github.com/obsidianmd/obsidian-releases/releases/download/v1.4.16/Obsidian-1.4.16.AppImage # TODO change to .deb # TODO download to Downloads folder # TODO Modify to be version-agnostic
 appimagelauncher Obsidian-1.4.16.AppImage
 
+# Discord
+wget https://discord.com/api/download?platform=linux&format=deb
+sudo nala install -y ~/Downloads/discord-0.0.32.deb
+
 # Chrysalis for Keyboardio Keyboards
 wget https://github.com/keyboardio/Chrysalis/releases/download/v0.13.2/Chrysalis-0.13.2-x64.AppImage
 appimagelauncher Chrysalis-0.13.2-x64
@@ -78,4 +85,4 @@ source ~/Code/My-Debian-System/publishing.sh
 source ~/Code/My-Debian-System/music.sh
 source ~/Code/My-Debian-System/gaming.sh
 
-sudo reboot now
+sudo reboot nowdmenu
