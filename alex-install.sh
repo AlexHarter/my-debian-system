@@ -3,7 +3,8 @@
 # TODO create folders for auxillary scripts
 
 # Start here.  Enter these commands:
-# sudo apt install git
+# sudo apt install nala
+# sudo nala install git
 # mkdir ~/Code
 # cd ~/Code
 # git clone https://github.com/AlexHarter/My-Debian-System
@@ -11,37 +12,22 @@
 # chmod +x ~/Code/My-Debian-System/alex-install.sh
 # ./alex-install.sh
 
-mkdir ~/Downloads
+mkdir ~/Code ~/Downloads ~/Documents ~/Music ~/Pictures ~/Videos
 
-# apt frontend: nala
-sudo apt install -y nala
-
-# Display Server: X
+#Window Manager: dwm
+## Dependencies
 sudo nala install -y xorg
-
-#Window Manager: i3
-sudo nala install -y i3
-# TODO copy config to ~/.config/i3/
+sudo wget https://git.suckless.org/dwm
 
 # TODO enable natural scrolling
 
 # TODO replace dmenu with Rofi
 
-# Display Manager: ly
-sudo nala install -y build-essential libpam0g-dev libxcb-xkb-dev # Dependencies
-
-cd /
-sudo git clone --recurse-submodules https://github.com/fairyglade/ly
-cd ly
-sudo make
-sudo make install -y installsystemd
-sudo systemctl enable ly.service
-
 # Terminal: kitty
 sudo nala install kitty
 
-# File Manager: Thunar
-sudo nala  install -y thunar # TODO look for an alternative
+# File Manager: nnn
+sudo nala  install -y nnn # TODO look for an alternative
 
 # Audio
 sudo nala install -y pipewire-audio
