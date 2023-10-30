@@ -1,11 +1,7 @@
 #!/bin/bash
-# Steam
-wget https://cdn.cloudflare.steamstatic.com/client/installer/steam.deb
-sudo nala install ~/Downloads/steam.deb
+# Steam # TODO switch to flatpak
+sudo flatpak install steam
 
 # Minecraft
-## Prismlauncher
-curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
-echo "deb [signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
-sudo nala update
-sudo nala install prismlauncher
+## Prismlauncher # TODO switch to flatpak
+sudo flatpak install prismlauncher
