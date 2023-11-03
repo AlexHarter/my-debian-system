@@ -47,9 +47,9 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 apt-get update
 apt-get install sublime-text
 
-wget -P ~/Downloads Anaconda
-wget -P ~/Music Renoise
-wget -P ~/Downloads Chrysalis
+wget -P ~/Downloads https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+wget -P ~/Music https://files.renoise.com/demo/Renoise_3_4_3_Demo_Linux_x86_64.tar.gz
+wget -P ~/Downloads https://github.com/keyboardio/Chrysalis/releases/download/v0.13.2/Chrysalis-0.13.2-x64.AppImage
 
 # CONFIGURATION
 # TODO enable natural scrolling
